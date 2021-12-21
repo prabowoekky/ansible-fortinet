@@ -10,7 +10,7 @@
   tasks:
   - name: fortios_firewall_policy
     fortios_firewall_policy:
-      vdom: FGT-EW
+      vdom: "{{ vdom }}"
       state: present
       firewall_policy:
         action: accept
