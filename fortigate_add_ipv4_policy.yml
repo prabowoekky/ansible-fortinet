@@ -14,11 +14,16 @@
       state: present
       firewall_policy:
         action: accept
-        dstaddr: test1
-        dstintf: port3
-        name: policy1
+        dstaddr: 
+          - name: 'test1'
+        dstintf: 
+          - name: 'port3'
+        name: "policy1"
         policyid: 5
-        service: http
-        srcaddr: test2
-        srcintf: port3
+        service: 
+          - name: 'HTTP'
+        srcaddr: 
+          - name: 'test2'
+        srcintf: 
+          - name: 'port3'
         status: enable
