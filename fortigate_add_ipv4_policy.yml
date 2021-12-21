@@ -1,0 +1,24 @@
+- collections:
+  - fortinet.fortios
+  connection: httpapi
+  hosts: DC-FW-Forti-CNI-FG-08-16
+  vars:
+    ansible_httpapi_port: 443
+    ansible_httpapi_use_ssl: true
+    ansible_httpapi_validate_certs: false
+    vdom: FGT-EW
+  tasks:
+  - name: fortios_firewall_policy
+    fortios_firewall_policy:
+      vdom: FGT-EW
+      state: present
+      firewall_policy:
+        action: accept
+        dstaddr: test1
+        dstintf: port3
+        name: policy1
+        policyid: 5
+        service: http
+        srcaddr: test2
+        srcintf: port3
+        status: enable
