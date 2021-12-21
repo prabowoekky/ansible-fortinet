@@ -1,13 +1,2 @@
-- collections:
-  - fortinet.fortios
-  connection: httpapi
-  hosts: DC-FW-Forti-CNI-FG-08-16
-  vars:
-    ansible_httpapi_port: 443
-    ansible_httpapi_use_ssl: true
-    ansible_httpapi_validate_certs: false
-    vdom: FGT-EW
-  tasks:
-    - name: Password
-      vdom: {{ vdom }}
-      debug: msg="{{morpheus['server']['externalIp']}}"
+- name: external ip
+    debug: msg="{{morpheus['server']['externalIp']}}"
