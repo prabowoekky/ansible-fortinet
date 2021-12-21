@@ -20,6 +20,7 @@
           - name: 'port3'
         name: "policy1"
         policyid: 5
+        schedule: always
         service: 
           - name: 'HTTP'
         srcaddr: 
