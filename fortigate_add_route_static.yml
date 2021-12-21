@@ -1,0 +1,29 @@
+- collections:
+  - fortinet.fortios
+  connection: httpapi
+  hosts: DC-FW-Forti-CNI-FG-08-16
+  vars:
+    ansible_httpapi_port: 443
+    ansible_httpapi_use_ssl: true
+    ansible_httpapi_validate_certs: false
+    vdom: FGT-EW
+  tasks:
+  - name: fortios_router_static
+    fortios_router_static:
+      vdom: FGT-EW
+      state: present
+      router_static:
+        bfd: disable
+        blackhole: disable
+        device: port3
+        distance: 10
+        dst: 12.12.12.0 255.255.255.0
+        dynamic_gateway: disable
+        gateway: 10.1.110.5
+        internet_service: 0
+        link_monitor_exempt: disable
+        priority: 0
+        seq_num: 2
+        status: enable
+        vrf: 0
+        weight: 0
