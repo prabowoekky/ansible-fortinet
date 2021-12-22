@@ -7,6 +7,7 @@
     ansible_httpapi_use_ssl: true
     ansible_httpapi_validate_certs: false
     vdom: FGT-EW
+    policyid: i
   tasks:
   - name: fortios_firewall_policy
     fortios_firewall_policy:
