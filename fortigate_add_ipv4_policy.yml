@@ -19,6 +19,7 @@
         dstintf: 
           - name: 'port3'
         name: "policy1"
+        policyid: 20
         schedule: always
         service: 
           - name: 'DNS'
