@@ -13,4 +13,5 @@
       vdom: FGT-EW
       state: present
       firewall_address:
-        list
+        list:
+          ip
