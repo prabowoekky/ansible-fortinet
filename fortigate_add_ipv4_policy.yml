@@ -23,6 +23,7 @@
         schedule: always
         service: 
           - name: 'HTTP'
+          - name: 'HTTPS'
         srcaddr: 
           - name: 'test2'
         srcintf: 
