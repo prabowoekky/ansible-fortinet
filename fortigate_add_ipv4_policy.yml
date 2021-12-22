@@ -22,8 +22,7 @@
         policyid: 5
         schedule: always
         service: 
-          - name: 'HTTP'
-          - name: 'HTTPS'
+          - name: 'DNS'
         srcaddr: 
           - name: 'test2'
         srcintf: 
