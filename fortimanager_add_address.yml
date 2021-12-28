@@ -15,7 +15,7 @@
       mode: "add"
       adom: "root"
       ipv4: "ipmask"
-      ipv4addr: "10.7.220.30/32"
+      ipv4addr: "10.7.220.30"
       name: "ansible_v4Obj_ipMask2"
       comment: "Ansible is SUCKS! Paramgram!"
       #tags: "ansible, ipv4, object"
