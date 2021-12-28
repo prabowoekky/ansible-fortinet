@@ -1,21 +1,19 @@
-- name: CONFIG IPv4 IP ADDRESS OBJECT
-  hosts: DC-MGT-Forti-CNI-FMG-21
+- collections:
+  - fortinet.fortimanager
   connection: httpapi
-  gather_facts: False
-
+  hosts: DC-MGT-Forti-CNI-FMG-21
   vars:
-    ansible_httpapi_use_ssl: yes
-    ansible_httpapi_validate_certs: no
-    ansible_httpapi_port: 443
-
+     ansible_httpapi_use_ssl: true
+     ansible_httpapi_validate_certs: false
+     ansible_httpapi_port: 443
   tasks:
-  - name: ADD IPv4 IP ADDRESS OBJECT
-    fmgr_fwobj_address:
-      mode: "add"
-      adom: "root"
-      ipv4: "ipmask"
-      ipv4addr: "10.7.220.33/32"
-      name: "ansible_v4Obj_ipMask2"
-      comment: "Ansible is GOOD! Paramgram!"
-      #tags: "ansible, ipv4, object"
-      color: "26"
+  - name: Configure IPv4 addresses
+    fmgr_firewall_address:
+      bypass_validation: False
+      adom: root
+      state: present
+      firewall_address:
+        allow-routing: disable
+        associated-interface: any
+        name: 'ansible-test1'
+        visibility: disable
