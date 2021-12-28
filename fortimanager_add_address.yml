@@ -4,7 +4,7 @@
   gather_facts: False
 
   vars:
-    vdom: "root"
+    adom: "root"
     ansible_httpapi_use_ssl: yes
     ansible_httpapi_validate_certs: no
     ansible_httpapi_port: 443
