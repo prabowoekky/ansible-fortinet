@@ -1,6 +1,6 @@
 - name: CONFIG IPv4 IP ADDRESS OBJECT
   hosts: DC-MGT-Forti-CNI-FMG-21
-  connection: network_cli
+  connection: httpapi
   gather_facts: False
 
   tasks:
