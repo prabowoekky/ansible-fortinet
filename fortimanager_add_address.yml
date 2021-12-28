@@ -3,6 +3,12 @@
   connection: httpapi
   gather_facts: False
 
+  vars:
+    vdom: "root"
+    ansible_httpapi_use_ssl: yes
+    ansible_httpapi_validate_certs: no
+    ansible_httpapi_port: 443
+
   tasks:
   - name: ADD IPv4 IP ADDRESS OBJECT
     fmgr_fwobj_address:
