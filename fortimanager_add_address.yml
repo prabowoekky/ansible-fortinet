@@ -1,5 +1,5 @@
 - hosts: DC-MGT-Forti-CNI-FMG-21
-connection: httpapi
+  connection: httpapi
   collections:
   - fortinet.fortimanager
   vars:
