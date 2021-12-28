@@ -1,7 +1,7 @@
-- hosts: DC-MGT-Forti-CNI-FMG-21
-  connection: httpapi
-  collections:
+- collections:
   - fortinet.fortimanager
+  connection: httpapi
+  hosts: DC-MGT-Forti-CNI-FMG-21
   vars:
      ansible_httpapi_use_ssl: True
      ansible_httpapi_validate_certs: False
